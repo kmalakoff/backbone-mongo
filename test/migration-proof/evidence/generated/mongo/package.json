@@ -1,0 +1,12 @@
+{
+  "name": "generated-mongo-migration-proof",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "source": "src/20260910051707-created_by_migrate_mongo.ts",
+  "tsds": {
+    "targets": [
+      "esm"
+    ]
+  }
+}

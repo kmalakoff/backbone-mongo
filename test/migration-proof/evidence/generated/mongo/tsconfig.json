@@ -1,0 +1,16 @@
+{
+  "extends": "tsds-config/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

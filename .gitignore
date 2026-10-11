@@ -6,3 +6,5 @@ _build/
 .agents/
 .archive/
 .tmp/
+test/migration-proof/dist/
+test/migration-proof/docs/

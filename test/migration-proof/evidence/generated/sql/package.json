@@ -1,0 +1,12 @@
+{
+  "name": "generated-sql-migration-proof",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "source": "src/20260910051707_created_by_knex.ts",
+  "tsds": {
+    "targets": [
+      "esm"
+    ]
+  }
+}

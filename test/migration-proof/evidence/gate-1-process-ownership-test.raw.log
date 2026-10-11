@@ -1,0 +1,22 @@
+v22.23.2
+--------------
+$ npm run test:lifecycle:guarded
+
+> backbone-mongo-migration-proof@0.0.0 test:lifecycle:guarded
+> node test/fixtures/process-tree-timeout.mjs
+
+
+> backbone-mongo-migration-proof@0.0.0 test:lifecycle
+> tsds test:node --no-timeouts --grep "race worker process ownership"
+
+
+
+  race worker process ownership
+    ✔ treats error plus close without exit as a failed launch
+    ✔ force-terminates and awaits a process tree that ignores graceful termination (1251ms)
+GATE1_PROCESS_OWNERSHIP_EVIDENCE={"commands":["nvu 22 npm run test:lifecycle:guarded","nvu 22 npm run validate"],"runtime":{"node":"v22.23.2","platform":"darwin-arm64","sourceIdentities":{"package.json":"dc6d9bd5aa569d509463f1890a1f23be1236c23c5b6e225455c97479e54c66b8","package-lock.json":"28bfad36f6a2c2cda0651d6046a3db95c7682c84fa5039daeeecf829af4938bf","test/fixtures/process-tree-timeout.mjs":"1609c8acb33975066d66d0b18fc091c6a8e128f84141215efe52aabd1f39a59b","test/fixtures/stubborn-process.cjs":"8c7634202761d75d632a184c5c45e4edf7ba5c1a7700ee3d8c9c39c8fad254a4","test/integration/process-ownership.test.ts":"227e848e87502c0f94342448c8d6486bd6702c6d63f012bd712918039fc944e4","test/lib/proof.ts":"48168c9d4091dddee526d15bfb432313ef936efa5aede4f6bb499000f0efb9bb"}},"spawnFailure":{"error":{"name":"Error","message":"spawn /Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/.tmp/migration-proof-53827/missing-node-executable ENOENT","code":"ENOENT","path":"/Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/.tmp/migration-proof-53827/missing-node-executable","syscall":"spawn /Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/.tmp/migration-proof-53827/missing-node-executable"},"originalErrorPreserved":true,"pid":null,"exitObserved":false,"terminal":{"kind":"failed-launch","error":{"name":"Error","message":"spawn /Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/.tmp/migration-proof-53827/missing-node-executable ENOENT","code":"ENOENT","path":"/Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/.tmp/migration-proof-53827/missing-node-executable","syscall":"spawn /Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/.tmp/migration-proof-53827/missing-node-executable"},"close":{"code":-2,"signal":null},"stderr":""}},"forceTermination":{"parentPid":53829,"descendantPid":53830,"error":"Timed out waiting for race worker result","escalated":true,"terminal":{"kind":"exited","exit":{"code":null,"signal":"SIGKILL"},"close":{"code":null,"signal":"SIGKILL"},"postSpawnErrors":[],"stderr":""},"parentClosed":true,"descendantClosed":true}}
+
+
+  2 passing (1s)
+
+==============

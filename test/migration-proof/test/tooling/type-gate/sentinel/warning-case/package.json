@@ -1,0 +1,13 @@
+{
+  "name": "backbone-mongo-migration-proof-warning-type-sentinel",
+  "version": "0.0.0-private",
+  "private": true,
+  "type": "module",
+  "source": "ExperimentalWarning.ts",
+  "tsds": {
+    "targets": [
+      "cjs",
+      "esm"
+    ]
+  }
+}
