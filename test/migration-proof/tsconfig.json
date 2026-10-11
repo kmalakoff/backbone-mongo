@@ -1,0 +1,10 @@
+{
+  "extends": "tsds-config/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "lib": ["es2015", "es2021.promise"],
+    "types": ["mocha", "node"]
+  },
+  "include": ["src", "test"],
+  "exclude": ["node_modules", "dist", "test/tooling/type-gate/sentinel"]
+}

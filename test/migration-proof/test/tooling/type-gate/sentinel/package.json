@@ -1,0 +1,8 @@
+{
+  "name": "backbone-mongo-migration-proof-invalid-type-sentinel",
+  "version": "0.0.0-private",
+  "private": true,
+  "type": "module",
+  "source": "index.ts",
+  "tsds": { "targets": ["cjs", "esm"] }
+}

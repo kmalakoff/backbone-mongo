@@ -1,0 +1,24 @@
+{
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "../../..",
+    "types": [
+      "mocha",
+      "node"
+    ],
+    "strictNullChecks": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "../../../node_modules",
+    "../../../dist",
+    "../../../.tmp",
+    "dist",
+    "sentinel",
+    "consumer-cjs",
+    "consumer-esm"
+  ]
+}

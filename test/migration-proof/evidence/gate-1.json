@@ -1,0 +1,562 @@
+{
+  "commands": [
+    "nvu 22 npm run validate",
+    "nvu 22 npm test"
+  ],
+  "mongoServer": {
+    "version": "8.2.6",
+    "gitVersion": "5d25c835745d06f712320b6cdae9d50b7b43663e",
+    "allocator": "system"
+  },
+  "runtime": {
+    "node": "v22.23.2",
+    "platform": "darwin-arm64",
+    "fixturePackageSha256": "f8d91cf57c2c34de73e6ac863d188edc120d8791317996670784796eb14ea5ff",
+    "packageLockSha256": "28bfad36f6a2c2cda0651d6046a3db95c7682c84fa5039daeeecf829af4938bf",
+    "sourceIdentities": {
+      "package.json": "f8d91cf57c2c34de73e6ac863d188edc120d8791317996670784796eb14ea5ff",
+      "package-lock.json": "28bfad36f6a2c2cda0651d6046a3db95c7682c84fa5039daeeecf829af4938bf",
+      "src/facade.ts": "6fa97fc53ade593c7866b501824ff9ac8b672283f47f90e34e9e0485e97c9122",
+      "src/types.ts": "d0dc3f0024d48b455c7f6dff3646990ae4f634b80c623db7fb5b3bb8996739e7",
+      "src/worker.ts": "68782776f7628e262aeddeae54275fdfc07b3f9bf7e8a092193fabd076199679",
+      "src/workers/mongo-up.ts": "9361d8b2216a483cced84de49226c0b5bc9acdbc943c0c53a1f193fed860852f",
+      "src/proof-migrations/mongo/202609090001_baseline.ts": "eb82bbc22d19b3833a27766f28ff28d618e71c733eb01d1fc198a573ba63ef50",
+      "src/proof-migrations/mongo/202609090005_order_backdated.ts": "f025fee0c114fd03f0946652124c87a7367db6425a56e4717e4d5f7c189e548e",
+      "src/proof-migrations/mongo/202609090010_order_new.ts": "36a186983e8de31c89acd0ef5ad67266a294201bb01fe991ed439b872e65fcf4",
+      "src/proof-migrations/mongo/202609090020_failure.ts": "1fdb7bc4e3d67838c7def217713346ba92390265804290b59881149e4daa90c4",
+      "src/proof-migrations/mongo/202609090030_race.ts": "bda0157af1a8c41891bfe910e52193e651bee4ed36f0d31949755e16f58c16d0",
+      "src/proof-migrations/sql/202609090001_baseline.ts": "ec8b1b6a31c085c25396c37bb13ba846b44b92aa81d829ed575a168b18b3353f",
+      "src/proof-migrations/sql/202609090005_order_backdated.ts": "4fc4ce2a8c82be2fff8403a33ea091068b17c19f1b9c8f7aa3d81a59578394a9",
+      "src/proof-migrations/sql/202609090010_order_new.ts": "0291fa226f1594e97309dcf094167aaa74b0f176c80989c9315da55a631633b7",
+      "src/proof-migrations/sql/202609090020_failure.ts": "852f8bda237a7db18d140a608ad7276630c98921adf9615ccc9a8bfcac444980",
+      "src/proof-migrations/sql/202609090025_down_failure.ts": "6645dd0857f15479222c82c37ebafd9b8c277881a987f203b8da6f1c44aaf859",
+      "test/fixtures/knex.stub.ts": "ec8b1b6a31c085c25396c37bb13ba846b44b92aa81d829ed575a168b18b3353f",
+      "test/fixtures/sample-migration.ts": "eb82bbc22d19b3833a27766f28ff28d618e71c733eb01d1fc198a573ba63ef50",
+      "test/integration/gate-1.test.ts": "7833f9b53d591ad393158abb3bd6e514ba5ab3b418093a172ca65fb03936dc37",
+      "test/lib/proof.ts": "c15441159e27abee94d5a375c5fd5f59a63c3eb7d8f44d03a7fc1badbaa48a9d",
+      "test/unit/worker.test.ts": "c5c50c9d43a680cf30fc8637c0eedbcb3f0f10bbcff2c4456ebda4095fd79ce1",
+      "test/types/facade-consumer.ts": "46f8d818dd8031345e24d23d4a94ee0ed54a95faefbcc4a2664f7e31c6d15904"
+    },
+    "packages": {
+      "knex": {
+        "version": "3.3.0",
+        "resolved": "https://registry.npmjs.org/knex/-/knex-3.3.0.tgz",
+        "integrity": "sha512-LgWl031hNuLv9Lhxdd9093zULa2aNcoP04Bk29e5NidgRcEr/T0rAr2WYi4BhjTiCDoQiRU56meUE5rppLKZzQ=="
+      },
+      "migrate-mongo": {
+        "version": "14.0.7",
+        "resolved": "https://registry.npmjs.org/migrate-mongo/-/migrate-mongo-14.0.7.tgz",
+        "integrity": "sha512-+p7XfJDNaXPTHeo7v/ldYmVLMy8xYda0KMXSqkMUzlVndS39rMGBQHfyLrdmOKMjgciWyWpjekXzRQuj1B7HqA=="
+      },
+      "mongodb": {
+        "version": "7.6.0",
+        "resolved": "https://registry.npmjs.org/mongodb/-/mongodb-7.6.0.tgz",
+        "integrity": "sha512-WbZ6OCjYw2c53LOjfkQa+reXr7kIiOVpXXglnASFuiMtif0BvsMwHe3ClJHLm1/r7wJFwaasfFtD6iYIktB01g=="
+      },
+      "mongodb-memory-server": {
+        "version": "11.2.0",
+        "resolved": "https://registry.npmjs.org/mongodb-memory-server/-/mongodb-memory-server-11.2.0.tgz",
+        "integrity": "sha512-506AD8qvClVx8Raw/WhAUUWBgIXPyi856iC01aa5vAzHmn6WOXC6ulvudkTF7oTMzJxkyA0A84VpD4BpyfqJ9w=="
+      },
+      "sqlite3": {
+        "version": "6.0.1",
+        "resolved": "https://registry.npmjs.org/sqlite3/-/sqlite3-6.0.1.tgz",
+        "integrity": "sha512-X0czUUMG2tmSqJpEQa3tCuZSHKIx8PwM53vLZzKp/o6Rpy25fiVfjdbnZ988M8+O3ZWR1ih0K255VumCb3MAnQ=="
+      },
+      "ts-dev-stack": {
+        "version": "1.22.6",
+        "resolved": "https://registry.npmjs.org/ts-dev-stack/-/ts-dev-stack-1.22.6.tgz",
+        "integrity": "sha512-/D9AU6Pg2kLUy3fMlQ52j/8S0EHukUAbI0EMQr+lJPOcRIwE5d4L9RKghK4gtXFtJKFYDfSiFz9yaTISIv0B2g=="
+      },
+      "tsds-config": {
+        "version": "1.0.5",
+        "resolved": "https://registry.npmjs.org/tsds-config/-/tsds-config-1.0.5.tgz",
+        "integrity": "sha512-HRdDje9pJ5qygTEtpg3m+0aLPmiTXoBfyqgt+ONNQFvl2LekJ52QlQAbZP7mXaYcVrumZkHdsQuvk4JwPPwpMg=="
+      }
+    },
+    "exports": {
+      "knexImportKeys": [
+        "default"
+      ],
+      "migrateMongoImportKeys": [
+        "config",
+        "create",
+        "database",
+        "default",
+        "down",
+        "init",
+        "status",
+        "up"
+      ],
+      "migrateMongoRequireKeys": [],
+      "migrateMongoRequireUpType": "object",
+      "migrateMongoRequireUpResolvesTo": "function"
+    }
+  },
+  "sql": {
+    "create": {
+      "sourceId": "20260910051707_created_by_knex.ts",
+      "deployedId": "20260910051707_created_by_knex.js"
+    },
+    "statusBefore": [
+      {
+        "id": "20260910051707_created_by_knex.js",
+        "state": "pending"
+      }
+    ],
+    "up": {
+      "applied": [
+        "20260910051707_created_by_knex.js"
+      ]
+    },
+    "callbackReturnType": "undefined",
+    "statusAfterUp": [
+      {
+        "id": "20260910051707_created_by_knex.js",
+        "state": "applied"
+      }
+    ],
+    "down": {
+      "reverted": [
+        "20260910051707_created_by_knex.js"
+      ]
+    },
+    "statusAfterDown": [
+      {
+        "id": "20260910051707_created_by_knex.js",
+        "state": "pending"
+      }
+    ],
+    "generatedBuild": {
+      "command": "/Users/kevin/.nvu/installed/v22.23.2/bin/node /Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/test/migration-proof/node_modules/ts-dev-stack/bin/cli.js build",
+      "sourcePath": "/Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/.tmp/migration-proof-36470/sql/create/migrations/20260910051707_created_by_knex.ts",
+      "deployedPath": "/Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/.tmp/migration-proof-36470/sql/generated-build/dist/esm/20260910051707_created_by_knex.js",
+      "migrationsDir": "/Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/.tmp/migration-proof-36470/sql/generated-build/dist/esm",
+      "retainedSourcePath": "/Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/test/migration-proof/evidence/generated/sql/20260910051707_created_by_knex.ts",
+      "retainedDeployedPath": "/Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/test/migration-proof/evidence/generated/sql/20260910051707_created_by_knex.js",
+      "retainedDeclarationPath": "/Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/test/migration-proof/evidence/generated/sql/20260910051707_created_by_knex.d.ts",
+      "retainedPackagePath": "/Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/test/migration-proof/evidence/generated/sql/package.json",
+      "retainedTsconfigPath": "/Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/test/migration-proof/evidence/generated/sql/tsconfig.json",
+      "stdout": "Created dist/esm/20260910051707_created_by_knex.js,dist/esm/20260910051707_created_by_knex.js.map\nCreated dist/esm/20260910051707_created_by_knex.d.ts\n",
+      "stderr": "",
+      "sourceSha256": "ec8b1b6a31c085c25396c37bb13ba846b44b92aa81d829ed575a168b18b3353f",
+      "deployedSha256": "c3203b214110e782800c4bf9aa6b1a590b13ee50cebe148ea7ae99a8a0897a05"
+    }
+  },
+  "facadeParity": {
+    "createSuccess": {
+      "promise": {
+        "error": null,
+        "result": {
+          "sourceId": "20260910051707_facade_parity.ts",
+          "deployedId": "20260910051707_facade_parity.js"
+        },
+        "resultProvided": true,
+        "returnedType": "Promise"
+      },
+      "callback": {
+        "calls": 1,
+        "error": null,
+        "result": {
+          "sourceId": "20260910051707_facade_parity.ts",
+          "deployedId": "20260910051707_facade_parity.js"
+        },
+        "resultProvided": true,
+        "returnedType": "undefined"
+      }
+    },
+    "statusSuccess": {
+      "promise": {
+        "error": null,
+        "result": [
+          {
+            "id": "202609090001_baseline.js",
+            "state": "pending"
+          }
+        ],
+        "resultProvided": true,
+        "returnedType": "Promise"
+      },
+      "callback": {
+        "calls": 1,
+        "error": null,
+        "result": [
+          {
+            "id": "202609090001_baseline.js",
+            "state": "pending"
+          }
+        ],
+        "resultProvided": true,
+        "returnedType": "undefined"
+      }
+    },
+    "upSuccess": {
+      "promise": {
+        "error": null,
+        "result": {
+          "applied": [
+            "202609090001_baseline.js"
+          ]
+        },
+        "resultProvided": true,
+        "returnedType": "Promise"
+      },
+      "callback": {
+        "calls": 1,
+        "error": null,
+        "result": {
+          "applied": [
+            "202609090001_baseline.js"
+          ]
+        },
+        "resultProvided": true,
+        "returnedType": "undefined"
+      }
+    },
+    "downSuccess": {
+      "promise": {
+        "error": null,
+        "result": {
+          "reverted": [
+            "202609090001_baseline.js"
+          ]
+        },
+        "resultProvided": true,
+        "returnedType": "Promise"
+      },
+      "callback": {
+        "calls": 1,
+        "error": null,
+        "result": {
+          "reverted": [
+            "202609090001_baseline.js"
+          ]
+        },
+        "resultProvided": true,
+        "returnedType": "undefined"
+      }
+    },
+    "errors": {
+      "create": {
+        "promise": {
+          "error": "A name must be specified for the generated migration",
+          "resultProvided": false,
+          "returnedType": "Promise"
+        },
+        "callback": {
+          "calls": 1,
+          "error": "A name must be specified for the generated migration",
+          "resultProvided": false,
+          "returnedType": "undefined"
+        }
+      },
+      "status": {
+        "promise": {
+          "error": "select `name` from `knex_migrations` order by `id` asc - SQLITE_ERROR: no such column: name",
+          "resultProvided": false,
+          "returnedType": "Promise"
+        },
+        "callback": {
+          "calls": 1,
+          "error": "select `name` from `knex_migrations` order by `id` asc - SQLITE_ERROR: no such column: name",
+          "resultProvided": false,
+          "returnedType": "undefined"
+        }
+      },
+      "up": {
+        "promise": {
+          "error": "failure after SQL data change",
+          "resultProvided": false,
+          "returnedType": "Promise"
+        },
+        "callback": {
+          "calls": 1,
+          "error": "failure after SQL data change",
+          "resultProvided": false,
+          "returnedType": "undefined"
+        }
+      },
+      "down": {
+        "promise": {
+          "error": "failure after SQL down data change",
+          "resultProvided": false,
+          "returnedType": "Promise"
+        },
+        "callback": {
+          "calls": 1,
+          "error": "failure after SQL down data change",
+          "resultProvided": false,
+          "returnedType": "undefined"
+        }
+      }
+    },
+    "errorState": {
+      "upPromise": {
+        "data": [
+          {
+            "event": "failure-write"
+          }
+        ],
+        "history": []
+      },
+      "upCallback": {
+        "data": [
+          {
+            "event": "failure-write"
+          }
+        ],
+        "history": []
+      },
+      "downPromise": {
+        "data": [
+          {
+            "event": "down-prepared"
+          },
+          {
+            "event": "down-failure-write"
+          }
+        ],
+        "history": [
+          {
+            "name": "202609090025_down_failure.js"
+          }
+        ]
+      },
+      "downCallback": {
+        "data": [
+          {
+            "event": "down-prepared"
+          },
+          {
+            "event": "down-failure-write"
+          }
+        ],
+        "history": [
+          {
+            "name": "202609090025_down_failure.js"
+          }
+        ]
+      }
+    }
+  },
+  "sqlRisks": {
+    "ordering": {
+      "applicationOrder": [
+        {
+          "name": "202609090010_order_new.js"
+        },
+        {
+          "name": "202609090005_order_backdated.js"
+        }
+      ],
+      "reverted": [
+        "202609090010_order_new.js"
+      ],
+      "events": [
+        {
+          "event": "new-up"
+        },
+        {
+          "event": "backdated-up"
+        },
+        {
+          "event": "new-down"
+        }
+      ]
+    },
+    "failure": {
+      "error": "failure after SQL data change",
+      "data": [
+        {
+          "event": "failure-write"
+        }
+      ],
+      "history": []
+    }
+  },
+  "mongo": {
+    "create": {
+      "sourceId": "20260910051707-created_by_migrate_mongo.ts",
+      "deployedId": "20260910051707-created_by_migrate_mongo.js"
+    },
+    "statusBefore": [
+      {
+        "id": "20260910051707-created_by_migrate_mongo.js",
+        "state": "pending"
+      }
+    ],
+    "up": {
+      "applied": [
+        "20260910051707-created_by_migrate_mongo.js"
+      ]
+    },
+    "callbackReturnType": "undefined",
+    "statusAfterUp": [
+      {
+        "id": "20260910051707-created_by_migrate_mongo.js",
+        "state": "applied",
+        "appliedAt": "2026-09-10T05:17:08.259Z"
+      }
+    ],
+    "down": {
+      "reverted": [
+        "20260910051707-created_by_migrate_mongo.js"
+      ]
+    },
+    "statusAfterDown": [
+      {
+        "id": "20260910051707-created_by_migrate_mongo.js",
+        "state": "pending"
+      }
+    ],
+    "widgetsCollectionsAfterDown": [],
+    "generatedBuild": {
+      "command": "/Users/kevin/.nvu/installed/v22.23.2/bin/node /Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/test/migration-proof/node_modules/ts-dev-stack/bin/cli.js build",
+      "sourcePath": "/Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/.tmp/migration-proof-36470/mongo/create/migrations/20260910051707-created_by_migrate_mongo.ts",
+      "deployedPath": "/Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/.tmp/migration-proof-36470/mongo/generated-build/dist/esm/20260910051707-created_by_migrate_mongo.js",
+      "migrationsDir": "/Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/.tmp/migration-proof-36470/mongo/generated-build/dist/esm",
+      "retainedSourcePath": "/Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/test/migration-proof/evidence/generated/mongo/20260910051707-created_by_migrate_mongo.ts",
+      "retainedDeployedPath": "/Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/test/migration-proof/evidence/generated/mongo/20260910051707-created_by_migrate_mongo.js",
+      "retainedDeclarationPath": "/Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/test/migration-proof/evidence/generated/mongo/20260910051707-created_by_migrate_mongo.d.ts",
+      "retainedPackagePath": "/Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/test/migration-proof/evidence/generated/mongo/package.json",
+      "retainedTsconfigPath": "/Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/test/migration-proof/evidence/generated/mongo/tsconfig.json",
+      "stdout": "Created dist/esm/20260910051707-created_by_migrate_mongo.js,dist/esm/20260910051707-created_by_migrate_mongo.js.map\nCreated dist/esm/20260910051707-created_by_migrate_mongo.d.ts\n",
+      "stderr": "",
+      "sourceSha256": "eb82bbc22d19b3833a27766f28ff28d618e71c733eb01d1fc198a573ba63ef50",
+      "deployedSha256": "b9be55e1fc7367c9fdbfb764f7120839dd6c7fe3e37e9262f87d891e48bdfa0c"
+    }
+  },
+  "mongoCrossTalk": {
+    "expectedForFirstConfig": "202609090001_baseline.js",
+    "observedAfterSecondSet": [
+      {
+        "fileName": "202609090030_race.js",
+        "appliedAt": "PENDING"
+      }
+    ]
+  },
+  "mongoRisks": {
+    "ordering": {
+      "applicationOrder": [
+        "202609090010_order_new.js",
+        "202609090005_order_backdated.js"
+      ],
+      "reverted": [
+        "202609090010_order_new.js"
+      ],
+      "events": [
+        {
+          "event": "new-up"
+        },
+        {
+          "event": "backdated-up"
+        },
+        {
+          "event": "new-down"
+        }
+      ]
+    },
+    "failure": {
+      "error": "Could not migrate up 202609090020_failure.js: failure after Mongo data change",
+      "data": [
+        {
+          "event": "failure-write"
+        }
+      ],
+      "history": []
+    }
+  },
+  "mongoMissingHistory": {
+    "status": [],
+    "history": [
+      {
+        "fileName": "202609090001_baseline.js",
+        "appliedAt": "2026-09-10T05:17:08.954Z",
+        "migrationBlock": 1789017428823
+      }
+    ]
+  },
+  "mongoEarlyChildFailure": {
+    "error": "Race worker exited before ready (1): SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)\n    at JSON.parse (<anonymous>)\n    at main (file:///Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/test/migration-proof/dist/esm/workers/mongo-up.js:70:20)\n    at file:///Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/test/migration-proof/dist/esm/workers/mongo-up.js:72:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:681:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)\n",
+    "allChildrenClosed": true,
+    "exits": [
+      {
+        "code": null,
+        "signal": "SIGTERM",
+        "stderr": ""
+      },
+      {
+        "code": 1,
+        "signal": null,
+        "stderr": "SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)\n    at JSON.parse (<anonymous>)\n    at main (file:///Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/test/migration-proof/dist/esm/workers/mongo-up.js:70:20)\n    at file:///Users/kevin/Dev/Projects/knockback-v2/backbone-mongo/.worktrees/migration-prototype/test/migration-proof/dist/esm/workers/mongo-up.js:72:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:681:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)\n"
+      }
+    ]
+  },
+  "mongoRace": {
+    "reproduced": true,
+    "workerCount": 8,
+    "attempts": [
+      {
+        "attempt": 1,
+        "successfulWorkers": 8,
+        "failedWorkers": 0,
+        "workerPids": [
+          36480,
+          36481,
+          36482,
+          36483,
+          36484,
+          36485,
+          36486,
+          36487
+        ],
+        "clientsClosedBeforeResult": true,
+        "childExits": [
+          {
+            "code": 0,
+            "signal": null,
+            "stderr": ""
+          },
+          {
+            "code": 0,
+            "signal": null,
+            "stderr": ""
+          },
+          {
+            "code": 0,
+            "signal": null,
+            "stderr": ""
+          },
+          {
+            "code": 0,
+            "signal": null,
+            "stderr": ""
+          },
+          {
+            "code": 0,
+            "signal": null,
+            "stderr": ""
+          },
+          {
+            "code": 0,
+            "signal": null,
+            "stderr": ""
+          },
+          {
+            "code": 0,
+            "signal": null,
+            "stderr": ""
+          },
+          {
+            "code": 0,
+            "signal": null,
+            "stderr": ""
+          }
+        ],
+        "dataCount": 8,
+        "historyCount": 8,
+        "lockCount": 0
+      }
+    ]
+  }
+}

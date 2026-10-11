@@ -1,0 +1,17 @@
+v22.23.2
+--------------
+$ npm run validate
+
+> backbone-mongo-migration-proof@0.0.0 validate
+> tsds validate
+
+Checked 28 files in 26ms. No fixes applied.
+Created 30 files in dist/cjs
+Created 15 files in dist/cjs
+Created 30 files in dist/esm
+Created 15 files in dist/esm
+Found 1 file.
+1 file was already sorted.
+No depcheck issue
+[info] html generated at ./docs
+==============

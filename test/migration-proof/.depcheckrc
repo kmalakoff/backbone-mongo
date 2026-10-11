@@ -1,0 +1,1 @@
+ignores: ["backbone-mongo-migration-proof", "node-version-use", "sqlite3", "ts-dev-stack"]

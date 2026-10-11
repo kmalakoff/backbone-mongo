@@ -1,0 +1,57 @@
+{
+  "name": "backbone-mongo-migration-proof",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Executable migration-runner evidence for BackboneORM",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "dist/cjs/index.js",
+  "source": "src/index.ts",
+  "types": "dist/cjs/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "allowScripts": {
+    "@swc/core@1.16.13": false,
+    "core-js-pure@3.50.0": true,
+    "fsevents@2.3.3": false,
+    "mongodb-memory-server@11.2.0": false,
+    "sqlite3@6.0.1": false
+  },
+  "scripts": {
+    "build": "tsds build",
+    "format": "tsds format",
+    "test": "tsds test:node --no-timeouts",
+    "test:engines": "nvu engines tsds test:node --no-timeouts",
+    "test:lifecycle": "tsds test:node --no-timeouts --grep \"race worker process ownership\"",
+    "test:lifecycle:guarded": "node test/fixtures/process-tree-timeout.mjs",
+    "validate": "tsds validate"
+  },
+  "dependencies": {
+    "fs-remove-compat": "1.0.5",
+    "knex": "3.3.0",
+    "migrate-mongo": "14.0.7",
+    "mongodb": "7.6.0",
+    "mongodb-memory-server": "11.2.0",
+    "sqlite3": "6.0.1"
+  },
+  "devDependencies": {
+    "@types/mocha": "10.0.10",
+    "@types/node": "22.20.2",
+    "node-version-use": "2.5.8",
+    "ts-dev-stack": "1.22.6",
+    "tsds-build": "1.23.2",
+    "tsds-config": "1.0.5",
+    "tsds-mocha": "1.23.12",
+    "tsds-validate": "1.7.8"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}
