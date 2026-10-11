@@ -1,0 +1,21 @@
+ignores:
+  - "backbone-mongo"
+  - "node-version-use"
+  - "ts-dev-stack"
+  - "tsds-build"
+  - "tsds-config"
+  - "tsds-mocha"
+  - "tsds-unlink"
+  - "tsds-validate"
+  - "@types/backbone"
+  - "@types/mocha"
+  - "@types/node"
+  - "@swc/core"
+  - "typescript"
+ignoreDirs:
+  - ".tmp"
+ignorePatterns:
+  - "gulpfile.coffee"
+  - "src/**/*.coffee"
+  - "test/**/*.coffee"
+  - "lib/**"

@@ -1,0 +1,10 @@
+{
+  "extends": "tsds-config/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "lib": ["es2021"],
+    "types": ["mocha", "node"]
+  },
+  "include": ["src/**/*.ts", "test/**/*.ts"],
+  "exclude": ["node_modules", "dist", "test/tooling/type-gate/sentinel/**"]
+}

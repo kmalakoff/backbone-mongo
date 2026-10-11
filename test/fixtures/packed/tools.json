@@ -1,0 +1,19 @@
+{
+  "name": "backbone-mongo-packed-tools",
+  "version": "0.0.0-private",
+  "private": true,
+  "dependencies": {
+    "@swc/core": "1.16.2",
+    "ts-dev-stack": "1.22.6",
+    "tsds-build": "1.23.3",
+    "tsds-config": "1.0.5",
+    "tsds-unlink": "1.2.3",
+    "ts-swc-transform": "2.12.0",
+    "typescript": "6.0.3"
+  },
+  "overrides": {
+    "@swc/core": "$@swc/core",
+    "ts-swc-transform": "$ts-swc-transform",
+    "typescript": "$typescript"
+  }
+}

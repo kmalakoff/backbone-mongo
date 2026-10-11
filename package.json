@@ -2,16 +2,6 @@
   "name": "backbone-mongo",
   "version": "0.6.10",
   "description": "MongoDB storage for BackboneORM",
-  "main": "./lib/index.js",
-  "license": "MIT",
-  "author": "Kevin Malakoff (https://github.com/kmalakoff)",
-  "contributors": [
-    "Gwilym Humphreys (https://github.com/gwilymhumphreys)"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vidigami/backbone-mongo.git"
-  },
   "keywords": [
     "backbone",
     "orm",
@@ -19,31 +9,70 @@
     "mongo",
     "mongodb"
   ],
-  "engines": {
-    "node": "*"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vidigami/backbone-mongo.git"
   },
+  "license": "MIT",
+  "author": "Kevin Malakoff (https://github.com/kmalakoff)",
+  "contributors": [
+    "Gwilym Humphreys (https://github.com/gwilymhumphreys)"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "dist/cjs/index.js",
+  "source": "src/index.ts",
+  "types": "dist/cjs/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "ulimit -n 1024; gulp test",
-    "prepublish": "gulp build"
-  },
-  "devDependencies": {
-    "backbone-rest": "0.7.x",
-    "body-parser": "1.x",
-    "chai": "*",
-    "coffee-script": "*",
-    "express": "4.x",
-    "gulp": "*",
-    "gulp-coffee": "*",
-    "gulp-mocha": "*",
-    "gulp-util": "*",
-    "mocha": "*",
-    "event-stream": "*",
-    "supertest": "0.13.x"
+    "build": "tsds build",
+    "format": "tsds format",
+    "prepublishOnly": "node scripts/require-dist-tag.cjs && tsds validate",
+    "test": "npm run build && tsds test:node --no-timeouts",
+    "test:engines": "nvu engines tsds test:node --no-timeouts",
+    "version": "tsds version"
   },
   "dependencies": {
-    "underscore": "1.x",
-    "backbone": "1.x",
-    "backbone-orm": "0.7.x",
-    "mongodb": "*"
+    "@types/backbone": "1.4.23",
+    "backbone": "1.6.1",
+    "backbone-orm": "file:/Users/kevin/Dev/Projects/knockback-v2/backbone-orm/.worktrees/orm-contracts/.tmp/orm-contracts/accepted-oct04-cache-owned-json-ab81fef4-payload/backbone-orm-0.7.14.tgz",
+    "mongodb": "7.7.0",
+    "mongodb-connection-string-url": "7.0.2",
+    "queue-cb": "1.6.3",
+    "underscore": "1.13.8"
+  },
+  "devDependencies": {
+    "@swc/core": "1.16.2",
+    "@types/mocha": "10.0.10",
+    "@types/node": "20.19.0",
+    "fs-remove-compat": "1.0.6",
+    "node-version-use": "1.9.0",
+    "ts-dev-stack": "1.22.6",
+    "tsds-build": "1.23.3",
+    "tsds-config": "1.0.5",
+    "tsds-mocha": "1.24.0",
+    "tsds-unlink": "1.2.3",
+    "tsds-validate": "1.7.9",
+    "typescript": "6.0.3"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "allowScripts": {
+    "@swc/core": false,
+    "core-js-pure": false,
+    "esbuild": false,
+    "fsevents": false,
+    "thread-sleep-compat": false,
+    "node-filename-to-dist-paths": false,
+    "node-semvers": false
   }
 }

@@ -1,0 +1,4 @@
+{
+  "upgrade": true,
+  "reject": ["mongodb", "mongodb-connection-string-url", "@types/node", "backbone-orm", "ts-dev-stack", "tsds-build", "tsds-config", "tsds-mocha", "tsds-unlink", "tsds-validate"]
+}

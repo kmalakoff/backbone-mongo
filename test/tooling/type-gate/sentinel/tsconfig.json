@@ -1,0 +1,1 @@
+{ "extends": "../../../../node_modules/tsds-config/tsconfig.json", "compilerOptions": { "outDir": "dist", "types": ["node"] }, "include": ["index.ts"] }
